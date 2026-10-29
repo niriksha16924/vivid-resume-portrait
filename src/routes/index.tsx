@@ -55,7 +55,7 @@ function Index() {
             <a href="#projects" className="pop-card bg-transparent px-7 py-3 text-xs uppercase tracking-[0.2em]">See projects</a>
           </div>
         </div>
-        <div className="relative mx-auto w-72 md:w-96">
+        <div className="relative mx-auto w-52 md:w-64">
           <img src={photo.url} alt="Portrait of Niriksha" className="relative aspect-square w-full rounded-full ring-4 ring-primary ring-offset-8 ring-offset-background border border-border object-cover grayscale-[15%]" />
         </div>
       </header>
