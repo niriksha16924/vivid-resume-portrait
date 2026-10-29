@@ -16,13 +16,13 @@ export const Route = createFileRoute("/")({
 });
 
 const skills = [
-  { name: "PHP", c: "bg-primary text-primary-foreground" },
+  { name: "PHP", c: "bg-card text-card-foreground" },
   { name: "Python", c: "bg-secondary text-secondary-foreground" },
-  { name: "Java", c: "bg-accent text-accent-foreground" },
+  { name: "Java", c: "bg-card text-card-foreground" },
   { name: "HTML", c: "bg-tangerine text-secondary-foreground" },
   { name: "SQL", c: "bg-lime text-secondary-foreground" },
-  { name: "OOP", c: "bg-primary text-primary-foreground" },
-  { name: "Data Structures", c: "bg-accent text-accent-foreground" },
+  { name: "OOP", c: "bg-card text-card-foreground" },
+  { name: "Data Structures", c: "bg-card text-card-foreground" },
 ];
 
 const projects = [
@@ -44,9 +44,9 @@ function Index() {
 
       <header className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-12 md:grid-cols-2 md:py-20">
         <div>
-          <span className="inline-block rounded-full border-2 border-foreground bg-secondary px-4 py-1 text-sm font-bold text-secondary-foreground">👋 Hello, I'm</span>
+          <span className="inline-block rounded-full border border-border bg-secondary px-4 py-1 text-sm font-bold text-secondary-foreground">👋 Hello, I'm</span>
           <h1 className="mt-5 font-display text-6xl font-extrabold leading-none md:text-8xl">
-            <span className="bg-hero bg-clip-text text-transparent">Niriksha</span>
+            Niriksha
           </h1>
           <p className="mt-5 text-xl font-medium">MCA Student · Aspiring Software Developer</p>
           <p className="mt-2 text-muted-foreground">📍 Udupi, Karnataka</p>
@@ -56,17 +56,14 @@ function Index() {
           </div>
         </div>
         <div className="relative mx-auto w-72 md:w-96">
-          <div className="absolute -inset-4 rotate-6 rounded-[2rem] bg-hero" />
-          <div className="absolute -right-6 -top-6 h-16 w-16 rounded-full border-2 border-foreground bg-accent" />
-          <div className="absolute -bottom-5 -left-5 h-12 w-12 rotate-12 border-2 border-foreground bg-lime" />
-          <img src={photo.url} alt="Portrait of Niriksha" className="relative aspect-[4/5] w-full rounded-[2rem] border-2 border-foreground object-cover shadow-pop" />
+          <img src={photo.url} alt="Portrait of Niriksha" className="relative aspect-[4/5] w-full rounded-[2rem] border border-border object-cover shadow-pop" />
         </div>
       </header>
 
-      <section id="about" className="bg-hero border-y-2 border-foreground">
+      <section id="about" className="border-y border-border">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center">
-          <h2 className="font-display text-4xl font-extrabold text-primary-foreground">About me</h2>
-          <p className="mt-5 text-lg font-medium text-primary-foreground md:text-xl">
+          <h2 className="font-display text-4xl font-extrabold">About me</h2>
+          <p className="mt-5 text-lg font-medium text-muted-foreground md:text-xl">
             Motivated MCA student and BCA graduate seeking an entry-level IT opportunity to apply programming knowledge,
             contribute to software projects, and grow my skills in programming and problem-solving.
           </p>
@@ -87,7 +84,7 @@ function Index() {
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           {projects.map((p) => (
             <article key={p.title} className={`pop-card p-8 text-secondary-foreground ${p.c}`}>
-              <span className="rounded-full border-2 border-foreground bg-card px-3 py-1 text-xs font-bold">{p.tag}</span>
+              <span className="rounded-full border border-border bg-card px-3 py-1 text-xs font-bold">{p.tag}</span>
               <h3 className="mt-4 font-display text-2xl font-extrabold">{p.title}</h3>
               <ul className="mt-4 space-y-2">
                 {p.points.map((pt) => <li key={pt}>✦ {pt}</li>)}
@@ -116,7 +113,7 @@ function Index() {
         <div>
           <h2 className="font-display text-4xl font-extrabold">Certi<span className="text-primary">fied</span></h2>
           <div className="pop-card mt-8 bg-tangerine p-6 text-secondary-foreground">
-            <p className="text-4xl">☁️</p>
+            
             <h3 className="mt-2 font-display text-xl font-bold">Cloud Computing</h3>
             <p className="font-medium">NPTEL · 2026</p>
           </div>
