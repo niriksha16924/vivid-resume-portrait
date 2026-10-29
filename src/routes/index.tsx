@@ -147,7 +147,7 @@ function Index() {
           </ol>
         </div>
         <div>
-          <Heading n="05" a="Certifi" b="cate" />
+          <Heading n="05" a="Certified" b="course" />
           <div className="glass rounded-sm p-6">
             <Award className="h-8 w-8 text-primary" />
             <h3 className="mt-4 font-display text-2xl">Cloud Computing</h3>
