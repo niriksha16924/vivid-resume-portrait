@@ -19,8 +19,8 @@ const skills = [
   { name: "PHP", c: "bg-primary text-primary-foreground" },
   { name: "Python", c: "bg-secondary text-secondary-foreground" },
   { name: "Java", c: "bg-accent text-accent-foreground" },
-  { name: "HTML", c: "bg-tangerine text-foreground" },
-  { name: "SQL", c: "bg-lime text-foreground" },
+  { name: "HTML", c: "bg-tangerine text-secondary-foreground" },
+  { name: "SQL", c: "bg-lime text-secondary-foreground" },
   { name: "OOP", c: "bg-primary text-primary-foreground" },
   { name: "Data Structures", c: "bg-accent text-accent-foreground" },
 ];
@@ -44,7 +44,7 @@ function Index() {
 
       <header className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-12 md:grid-cols-2 md:py-20">
         <div>
-          <span className="inline-block rounded-full border-2 border-foreground bg-secondary px-4 py-1 text-sm font-bold">👋 Hello, I'm</span>
+          <span className="inline-block rounded-full border-2 border-foreground bg-secondary px-4 py-1 text-sm font-bold text-secondary-foreground">👋 Hello, I'm</span>
           <h1 className="mt-5 font-display text-6xl font-extrabold leading-none md:text-8xl">
             <span className="bg-hero bg-clip-text text-transparent">Niriksha</span>
           </h1>
@@ -86,7 +86,7 @@ function Index() {
         <h2 className="font-display text-4xl font-extrabold">Academic <span className="text-accent">projects</span></h2>
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           {projects.map((p) => (
-            <article key={p.title} className={`pop-card p-8 ${p.c}`}>
+            <article key={p.title} className={`pop-card p-8 text-secondary-foreground ${p.c}`}>
               <span className="rounded-full border-2 border-foreground bg-card px-3 py-1 text-xs font-bold">{p.tag}</span>
               <h3 className="mt-4 font-display text-2xl font-extrabold">{p.title}</h3>
               <ul className="mt-4 space-y-2">
@@ -115,7 +115,7 @@ function Index() {
         </div>
         <div>
           <h2 className="font-display text-4xl font-extrabold">Certi<span className="text-primary">fied</span></h2>
-          <div className="pop-card mt-8 bg-tangerine p-6">
+          <div className="pop-card mt-8 bg-tangerine p-6 text-secondary-foreground">
             <p className="text-4xl">☁️</p>
             <h3 className="mt-2 font-display text-xl font-bold">Cloud Computing</h3>
             <p className="font-medium">NPTEL · 2026</p>
@@ -123,7 +123,7 @@ function Index() {
         </div>
       </section>
 
-      <footer id="contact" className="border-t-2 border-foreground bg-foreground text-background">
+      <footer id="contact" className="border-t-2 border-foreground bg-card text-card-foreground">
         <div className="mx-auto max-w-6xl px-6 py-16 text-center">
           <h2 className="font-display text-5xl font-extrabold">Let's <span className="text-secondary">connect</span>!</h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4 font-bold">
