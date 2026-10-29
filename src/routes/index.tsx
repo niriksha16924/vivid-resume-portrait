@@ -31,17 +31,17 @@ const projects = [
 
 function Heading({ n, a, b }: { n: string; a: string; b: string }) {
   return (
-    <div className="mb-10 flex items-end gap-4">
+    <div className="mb-14 flex items-end gap-5">
       <span className="text-xs tracking-[0.3em] text-primary">{n}</span>
-      <h2 className="font-display text-5xl">{a} <span className="italic text-primary">{b}</span></h2>
-      <span className="mb-3 hidden h-px flex-1 bg-border sm:block" />
+      <h2 className="font-display text-5xl font-light md:text-6xl">{a} <span className="italic text-primary">{b}</span></h2>
+      <span className="hairline mb-4 hidden flex-1 opacity-40 sm:block" />
     </div>
   );
 }
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background bg-glow font-sans text-foreground">
+    <div className="min-h-screen grain bg-background bg-glow font-sans font-light text-foreground">
       <nav className="sticky top-0 z-20 border-b border-border bg-background/70 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <span className="font-display text-2xl tracking-wide">Niriksha<span className="text-primary">.</span></span>
@@ -54,24 +54,24 @@ function Index() {
         </div>
       </nav>
 
-      <header className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-20 md:grid-cols-[1.4fr_1fr] md:py-28">
+      <header className="rise mx-auto grid max-w-6xl items-center gap-14 px-6 py-20 md:grid-cols-[1.4fr_1fr] md:py-28">
         <div>
           <p className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-primary">
             <span className="h-px w-10 bg-primary" /> Hello, I'm
           </p>
-          <h1 className="mt-4 font-display text-7xl italic leading-none text-gradient md:text-9xl">Niriksha</h1>
+          <h1 className="mt-4 font-display text-8xl font-light italic leading-none text-gradient md:text-[10rem]">Niriksha</h1>
           <p className="mt-6 text-lg font-light tracking-wide">MCA Student · Aspiring Software Developer</p>
           <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="h-4 w-4 text-primary" /> Udupi, Karnataka</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href={resume.url} download="Niriksha_Resume.pdf" className="inline-flex items-center gap-2 rounded-sm bg-primary px-7 py-3 text-xs uppercase tracking-[0.2em] text-primary-foreground hover:opacity-90">
+            <a href={resume.url} download="Niriksha_Resume.pdf" className="inline-flex items-center gap-2 border border-primary px-8 py-4 text-[0.7rem] uppercase tracking-[0.3em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
               <Download className="h-4 w-4" /> Download Resume
             </a>
-            <a href="#contact" className="glass inline-flex items-center gap-2 rounded-sm px-7 py-3 text-xs uppercase tracking-[0.2em]">Contact me</a>
+            <a href="#contact" className="inline-flex items-center gap-2 px-2 py-4 text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground underline-offset-8 hover:text-foreground hover:underline">Contact me</a>
           </div>
           <div className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-6">
             {[["MCA", "Pursuing"], ["BCA", "2025"], ["NPTEL", "Certified"]].map(([a, b]) => (
               <div key={a}>
-                <p className="font-display text-3xl text-primary">{a}</p>
+                <p className="font-display text-4xl font-light italic text-primary">{a}</p>
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{b}</p>
               </div>
             ))}
@@ -83,17 +83,18 @@ function Index() {
         </div>
       </header>
 
-      <section id="about" className="mx-auto max-w-6xl px-6 py-16">
+      <section id="about" className="mx-auto max-w-6xl px-6 py-24">
         <Heading n="01" a="About" b="me" />
-        <div className="glass rounded-sm p-10">
-          <p className="font-display text-2xl leading-relaxed md:text-3xl">
+        <div className="relative border-l border-primary/60 py-4 pl-10 md:pl-16">
+          <span className="absolute -left-3 -top-10 font-display text-9xl italic text-primary/20">“</span>
+          <p className="font-display text-3xl font-light leading-snug md:text-4xl">
             Motivated MCA student and BCA graduate seeking an entry-level IT opportunity to apply programming knowledge,
             contribute to software projects, and grow my skills in <span className="italic text-primary">programming and problem-solving.</span>
           </p>
         </div>
       </section>
 
-      <section id="skills" className="mx-auto max-w-6xl px-6 py-16">
+      <section id="skills" className="mx-auto max-w-6xl px-6 py-24">
         <Heading n="02" a="Technical" b="skills" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {skills.map(({ group, icon: Icon, items }) => (
@@ -108,7 +109,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-16">
+      <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
         <Heading n="03" a="Academic" b="projects" />
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((p) => (
@@ -127,7 +128,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[2fr_1fr]">
+      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-[2fr_1fr]">
         <div>
           <Heading n="04" a="My" b="education" />
           <ol className="relative space-y-8 border-l border-border pl-8">
@@ -156,7 +157,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="resume" className="mx-auto max-w-6xl px-6 py-16">
+      <section id="resume" className="mx-auto max-w-6xl px-6 py-24">
         <Heading n="06" a="My" b="resume" />
         <div className="glass grid items-center gap-8 rounded-sm p-8 md:grid-cols-[auto_1fr_auto]">
           <div className="flex h-20 w-20 items-center justify-center rounded-sm border border-primary/50 bg-primary/10">
