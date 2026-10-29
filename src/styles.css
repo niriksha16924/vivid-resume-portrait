@@ -63,27 +63,27 @@
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(0.12 0.01 260);
+  --background: oklch(0.1 0.012 260);
   --foreground: oklch(0.96 0.01 250);
   --card: oklch(0.18 0.02 260);
   --card-foreground: oklch(0.96 0.01 250);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0.05 300);
-  --primary: oklch(0.65 0.17 250);
+  --primary: oklch(0.74 0.11 245);
   --primary-foreground: oklch(0.12 0.01 260);
   --secondary: oklch(0.18 0.02 260);
   --secondary-foreground: oklch(0.96 0.01 250);
   --muted: oklch(0.95 0.03 85);
   --muted-foreground: oklch(0.72 0.03 250);
-  --accent: oklch(0.65 0.17 250);
+  --accent: oklch(0.74 0.11 245);
   --accent-foreground: oklch(0.12 0.01 260);
   --tangerine: oklch(0.18 0.02 260);
   --lime: oklch(0.18 0.02 260);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.3 0.03 260);
+  --border: oklch(0.26 0.025 260);
   --input: oklch(0.9 0.02 85);
-  --ring: oklch(0.65 0.17 250);
+  --ring: oklch(0.74 0.11 245);
   --gradient-hero: linear-gradient(var(--primary), var(--primary));
   --shadow-pop: none;
   --chart-1: oklch(0.646 0.222 41.116);
@@ -186,4 +186,12 @@
 }
 @utility glow-ring {
   box-shadow: 0 0 0 4px var(--background), 0 0 0 6px var(--primary), 0 0 60px 10px color-mix(in oklab, var(--primary) 35%, transparent);
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@utility rise { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
+@utility hairline { background-image: linear-gradient(90deg, transparent, var(--primary), transparent); height: 1px; }
+@utility grain {
+  &::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 50; opacity: .05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 }
