@@ -69,23 +69,23 @@
   --card-foreground: oklch(0.97 0.01 85);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0.05 300);
-  --primary: oklch(0.63 0.25 15);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.85 0.17 90);
-  --secondary-foreground: oklch(0.2 0.05 300);
+  --primary: oklch(0.8 0.12 75);
+  --primary-foreground: oklch(0.12 0 0);
+  --secondary: oklch(0.19 0.01 300);
+  --secondary-foreground: oklch(0.97 0.01 85);
   --muted: oklch(0.95 0.03 85);
   --muted-foreground: oklch(0.72 0.03 85);
-  --accent: oklch(0.7 0.16 195);
-  --accent-foreground: oklch(0.99 0 0);
-  --tangerine: oklch(0.74 0.19 55);
-  --lime: oklch(0.82 0.2 135);
+  --accent: oklch(0.8 0.12 75);
+  --accent-foreground: oklch(0.12 0 0);
+  --tangerine: oklch(0.19 0.01 300);
+  --lime: oklch(0.19 0.01 300);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.97 0.01 85);
+  --border: oklch(0.3 0 0);
   --input: oklch(0.9 0.02 85);
   --ring: oklch(0.63 0.25 15);
-  --gradient-hero: linear-gradient(135deg, var(--primary), var(--tangerine) 50%, var(--secondary));
-  --shadow-pop: 6px 6px 0 0 var(--foreground);
+  --gradient-hero: linear-gradient(var(--primary), var(--primary));
+  --shadow-pop: none;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -115,11 +115,11 @@
   box-shadow: var(--shadow-pop);
 }
 @utility pop-card {
-  border: 2px solid var(--foreground);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-pop);
   transition: transform .2s, box-shadow .2s;
-  &:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 0 var(--foreground); }
+  &:hover { transform: translate(-3px, -3px); border-color: var(--primary); }
 }
 
 .dark {
