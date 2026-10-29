@@ -96,7 +96,7 @@ function Index() {
 
       <section className="mx-auto grid max-w-6xl gap-8 px-6 pb-20 md:grid-cols-3">
         <div className="md:col-span-2">
-          <h2 className="font-display text-4xl font-extrabold">Edu<span className="text-tangerine">cation</span></h2>
+          <h2 className="font-display text-4xl font-extrabold">Edu<span className="text-primary">cation</span></h2>
           <div className="mt-8 space-y-6">
             <div className="pop-card bg-card p-6">
               <p className="text-sm font-bold text-primary">Currently pursuing</p>
@@ -120,12 +120,12 @@ function Index() {
         </div>
       </section>
 
-      <footer id="contact" className="border-t-2 border-foreground bg-card text-card-foreground">
+      <footer id="contact" className="border-t border-border bg-card text-card-foreground">
         <div className="mx-auto max-w-6xl px-6 py-16 text-center">
-          <h2 className="font-display text-5xl font-extrabold">Let's <span className="text-secondary">connect</span>!</h2>
+          <h2 className="font-display text-5xl font-extrabold">Let's <span className="text-primary">connect</span>!</h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4 font-bold">
             <a href="mailto:nirikshasanthosh647@gmail.com" className="rounded-full bg-primary px-6 py-3 text-primary-foreground">✉ nirikshasanthosh647@gmail.com</a>
-            <a href="tel:9916780317" className="rounded-full bg-secondary px-6 py-3 text-secondary-foreground">☎ 9916780317</a>
+            <a href="tel:9916780317" className="rounded-full border border-border px-6 py-3">☎ 9916780317</a>
           </div>
           <p className="mt-10 text-sm opacity-70">© 2026 Niriksha · Udupi, Karnataka</p>
         </div>
