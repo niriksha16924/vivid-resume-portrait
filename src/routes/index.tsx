@@ -46,7 +46,7 @@ function Index() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <span className="font-display text-2xl tracking-wide">Niriksha<span className="text-primary">.</span></span>
           <div className="flex items-center gap-6 text-xs font-light uppercase tracking-[0.25em]">
-            {["about", "skills", "projects", "resume"].map((s) => (
+            {["about", "skills", "projects", "contact"].map((s) => (
               <a key={s} href={`#${s}`} className="hidden hover:text-primary md:inline">{s}</a>
             ))}
             <a href={resume.url} download="Niriksha_Resume.pdf" className="rounded-sm border border-primary px-4 py-2 text-primary hover:bg-primary hover:text-primary-foreground">Resume</a>
@@ -129,7 +129,7 @@ function Index() {
 
       <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[2fr_1fr]">
         <div>
-          <Heading n="04" a="Edu" b="cation" />
+          <Heading n="04" a="My" b="education" />
           <ol className="relative space-y-8 border-l border-border pl-8">
             {[
               ["Currently pursuing", "Master of Computer Applications (MCA)", "Poornaprajna Institute of Management"],
@@ -147,7 +147,7 @@ function Index() {
           </ol>
         </div>
         <div>
-          <Heading n="05" a="Certi" b="fied" />
+          <Heading n="05" a="Certifi" b="cate" />
           <div className="glass rounded-sm p-6">
             <Award className="h-8 w-8 text-primary" />
             <h3 className="mt-4 font-display text-2xl">Cloud Computing</h3>
