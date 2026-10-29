@@ -56,7 +56,7 @@ function Index() {
           </div>
         </div>
         <div className="relative mx-auto w-72 md:w-96">
-          <img src={photo.url} alt="Portrait of Niriksha" className="relative aspect-[4/5] w-full rounded-sm border border-border object-cover grayscale-[15%]" />
+          <img src={photo.url} alt="Portrait of Niriksha" className="relative aspect-square w-full rounded-full ring-4 ring-primary ring-offset-8 ring-offset-background border border-border object-cover grayscale-[15%]" />
         </div>
       </header>
 
